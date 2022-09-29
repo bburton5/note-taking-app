@@ -4,7 +4,7 @@ const database = require("./db/db.json");
 const path = require("path");
 const fs = require("fs");
 const uuid = require("./helpers/uuid");
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 const app = express();
 
 // Middleware for parsing JSON
