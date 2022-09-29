@@ -74,7 +74,7 @@ app
     }
   });
 
-// PORT is listening
+// App is listening on PORT
 app.listen(PORT, () =>
   console.log(`Note-taking app listening at http://localhost:${PORT}`)
 );
