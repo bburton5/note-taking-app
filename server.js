@@ -13,23 +13,13 @@ app.use(express.json());
 // Middleware for accessing public folder
 app.use(express.static("public"));
 
-// GET requests
-app.get("/notes", (req, res) => {
-  console.log("get request for /notes is working");
-  res.sendFile(path.join(__dirname, "/public/notes.html"));
-});
-app.get("*", (req, res) => {
-  console.log("get request for * is working");
-  res.sendFile(path.join(__dirname, "/public/index.html"));
-});
-
 // GET and POST request for /api/notes
 app
   .route("/api/notes")
   .get((req, res) => {
-    res.json(database);
+    // res.json(database);
     // Sending a message to the user
-    res.status(200).json(`${req.method} request received to get notes`);
+    res.status(200).json(database);
     // Logging our request to the terminal
     console.info(`${req.method} request received to get notes`);
   })
@@ -73,6 +63,16 @@ app
       res.status(500).json("Error in adding new note");
     }
   });
+
+// GET requests
+app.get("/notes", (req, res) => {
+  console.log("get request for /notes is working");
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+app.get("/noodles", (req, res) => {
+  console.log("get request for * is working");
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 // App is listening on PORT
 app.listen(PORT, () =>
