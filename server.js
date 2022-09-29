@@ -13,11 +13,10 @@ app.use(express.json());
 // Middleware for accessing public folder
 app.use(express.static("public"));
 
-// GET and POST request for /api/notes
+// GET and POST request for API
 app
   .route("/api/notes")
   .get((req, res) => {
-    // res.json(database);
     // Sending a message to the user
     res.status(200).json(database);
     // Logging our request to the terminal
@@ -26,21 +25,27 @@ app
 
   // POST request to add a new note
   .post((req, res) => {
+    // Logging out request to the terminal
     console.info(`${req.method} request received to add a new note`);
+    // Destructuring the for items in req.body
     const { title, text } = req.body;
     if (title && text) {
+      // Where the new note is saved to (which will get pushed later)
       const newNote = {
         title,
         text,
         note_id: uuid(),
       };
-
+      // Obtaining the existing notes
       fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) {
           console.error(err);
         } else {
+          // Converting the strings into a JSON object
           const parsedNotes = JSON.parse(data);
+          // Adding the new review to the JSON object
           parsedNotes.push(newNote);
+          // Writing the file again with the new note
           fs.writeFile(
             "./db/db.json",
             JSON.stringify(parsedNotes, null, 4),
@@ -64,7 +69,7 @@ app
     }
   });
 
-// GET requests
+// Remaining GET requests
 app.get("/notes", (req, res) => {
   console.log("get request for /notes is working");
   res.sendFile(path.join(__dirname, "./public/notes.html"));
