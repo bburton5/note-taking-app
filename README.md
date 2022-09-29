@@ -9,8 +9,8 @@
 
 ## Usage
 
-![screenshot of the Note Taking App Home Page](./image0.png)
-![screenshot of the Note Taking App Notes Page](./image1.png)
+![screenshot of the Note Taking App Home Page](./images/image0.png)
+![screenshot of the Note Taking App Notes Page](./images/image1.png)
 
 ## Credits
 
