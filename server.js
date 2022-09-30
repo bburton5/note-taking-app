@@ -34,7 +34,7 @@ app
       const newNote = {
         title,
         text,
-        note_id: uuid(),
+        id: uuid(),
       };
       // Obtaining the existing notes
       fs.readFile("./db/db.json", "utf8", (err, data) => {
@@ -74,7 +74,7 @@ app.get("/notes", (req, res) => {
   console.log("get request for /notes is working");
   res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
-app.get("/noodles", (req, res) => {
+app.get("*", (req, res) => {
   console.log("get request for * is working");
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });

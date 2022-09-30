@@ -1,51 +1,62 @@
 [
     {
         "title": "Test Title",
-        "text": "Test text"
+        "text": "Test text",
+        "id": "0"
     },
     {
         "title": "First Note",
         "text": "Try number 1",
-        "note_id": "0013"
+        "id": "0013"
     },
     {
         "title": "Second Note",
         "text": "Try number 2",
-        "note_id": "8c13"
+        "id": "8c13"
     },
     {
         "title": "Hello",
         "text": "Hello world!",
-        "note_id": "06f6"
+        "id": "06f6"
     },
     {
         "title": "Hello2",
         "text": "Hello World2!\n",
-        "note_id": "be69"
+        "id": "be69"
     },
     {
         "title": "How does this work",
         "text": "I am stuck",
-        "note_id": "6178"
+        "id": "6178"
     },
     {
         "title": "Testing ",
         "text": "Testing",
-        "note_id": "f7ed"
+        "id": "f7ed"
     },
     {
         "title": "Chores",
         "text": "Dishes",
-        "note_id": "f475"
+        "id": "f475"
     },
     {
         "title": "Rionel Dmello",
         "text": "help",
-        "note_id": "4cdb"
+        "id": "4cdb"
     },
     {
         "title": "123",
         "text": "abc",
-        "note_id": "2664"
+        "id": "2664"
+    },
+    {
+        "title": "Office hours",
+        "text": "hello",
+        "id": "88c1"
+    },
+    {
+        "title": "testing testing",
+        "text": "dkfsldkfjs",
+        "id": "997b"
     }
 ]
