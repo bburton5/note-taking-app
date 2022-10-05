@@ -1,4 +1,4 @@
-# Note Taker Starter Code
+# Note Taking App
 
 ## This app was created in order to allow for simple, easy and efficient note-taking for users. By working on this app, i learned to set up the backend of an application and connect it to the front end. In order to do this, i learned to utilize express to set up a server, Insomnia to ensure my server was running HTTP methods, and Heroku to run my app on a cloud.
 
